@@ -6,8 +6,8 @@ import users from "../models/users.js";
 
 router.get("/", async (req, res) => {
   try {
-    const users = await users.find({});
-    res.send({ users });
+    const user = await users.find({});
+    res.send({ user });
   } catch (err) {
     res.status(400).send({ error: err });
   }
